@@ -73,11 +73,14 @@ This test suite requires some modifications to the pbkit used by the nxdk in ord
 
 To facilitate this, the nxdk is included as a submodule of this project, referencing the
 `pbkit_extensions` branch from https://github.com/abaire/nxdk.
+The activation script of this submodule must be used instead of one from a usual nxdk setup.
+
+```sh
+$ source third_party/nxdk/bin/activate
+```
 
 This project should be cloned with the `--recursive` flag to pull the submodules and their submodules,
 after the fact this can be achieved via `git submodule update --init --recursive`.
-
-For macOS, the patched nxdk currently assumes that the Homebrew llvm@11 package has been installed.
 
 ## Adding new tests
 
